@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Very chess.</title>
+
+    <link rel="shortcut icon" href="Images/kingWhite.png" />
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+    <script defer src="https://long-chess.herokuapp.com/socket.io/socket.io.js"></script>
+    <script defer type="module" src="./js/app.js"></script>
+</head>
+
+<body>
+    <div id="github">
+
+        Find on
+
+        <a id="githubLink" href="https://github.com/braydenwerner/Long-Chess" target="_blank">Github</a>
+    </div>
+
+    <div id="joinContainer">
+        <h1 id="standardChessMainHeader" class="mainHeader">Standard Chess</h1>
+        <h1 id="standardChessSubHeader" class="subHeader">Very square.</h1>
+        <h1 id="longChessMainHeader" class="mainHeader">Long Chess</h1>
+        <h1 id="longChessSubHeader" class="subHeader">At it's longest.</h1>
+        <h1 id="instantDeathChessMainHeader" class="mainHeader">Instant Death Chess</h1>
+        <h1 id="instantDeathChessSubHeader" class="subHeader">Checks are checkmates.</h1>
+
+        <div id="playOptions">
+            <button id="createRoomButton">Create Room</button>
+            <button id="joinRoomButton">Join Room</button>
+        </div>
+    </div>
+
+    <div id="changeGameModeContainer">
+        <img id="nextPageLeft" src="./Images/nextPageLeft.png">
+        <h1 id="changeGameModeText">Change GameMode</h1>
+        <img id="nextPageRight" src="./Images/nextPageRight.png">
+    </div>
+
+    <div id="createRoomPopupOverlay">
+        <div id="createRoomContainer">
+            <img id="gameModeImage">
+            <div id="inputField">
+                <input id="createRoomInput" placeholder="Enter Room Code" autocomplete="off" />
+                <button id="submitCreateRoomButton">Create Game</button>
+                <img id="closeCreateRoomPopup" src="./Images/closeRoomPopupImage.png" />
+            </div>
+        </div>
+    </div>
+
+    <div id="joinRoomPopupOverlay">
+        <div id="joinRoomContainer">
+            <input id="joinRoomInput" placeholder="Enter Room Code" autocomplete="off" />
+            <img id="closeJoinRoomPopup" src="./Images/closeRoomPopupImage.png" width:"10px" height="24px" />
+        </div>
+    </div>
+
+    <canvas id="display"></canvas>
+
+    <div id="winScreenPopupOverlay">
+        <div id="winContainer">
+            <h1 id="winMessage"></h1>
+            <img id="winImage">
+            <button id="backToHomeButton">Back to Home</button>
+        </div>
+    </div>
+
+    <img id="audioIcon" src="Images/noAudio.png">
+</body>
+
+</html>

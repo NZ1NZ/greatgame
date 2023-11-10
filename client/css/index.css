@@ -1,0 +1,595 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(41, 45, 62);
+}
+
+#github {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: rgb(255, 255, 255);
+}
+
+#githubLink {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+}
+
+#audioIcon {
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    width: 55px;
+    height: 55px;
+}
+
+#joinContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(31, 35, 42);
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#playOptions {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+    margin-top: 3%;
+}
+
+#changeGameModeContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#longChessMainHeader, #instantDeathChessMainHeader {
+    display: none;
+}
+
+#longChessSubHeader, #instantDeathChessSubHeader {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .mainHeader {
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 80px;
+        color: rgb(255, 255, 255);
+        margin-top: 15%;
+        margin-bottom: 1%;
+    }
+    .subHeader {
+        color: rgb(200, 200, 200);
+    }
+    #createRoomButton {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: rgb(133, 170, 83);
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+        outline: none;
+        box-shadow: 0px 5px rgb(83, 113, 51);
+        box-sizing: border-box;
+        cursor: pointer;
+        font-stretch: 100%;
+        margin-bottom: 10%;
+        width: 80%;
+    }
+    #joinRoomButton {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: rgb(133, 170, 83);
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+        outline: none;
+        box-shadow: 0px 5px rgb(83, 113, 51);
+        box-sizing: border-box;
+        cursor: pointer;
+        font-stretch: 100%;
+        margin-bottom: 10%;
+        width: 80%;
+    }
+    #nextPageLeft {
+        width: 70px;
+        height: 70px;
+    }
+    #changeGameModeText {
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 50px;
+        color: rgb(255, 255, 255);
+        pointer-events: none;
+    }
+    #nextPageRight {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (min-width: 500px) {
+    .mainHeader {
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 100px;
+        color: rgb(255, 255, 255);
+        margin-top: 15%;
+        margin-bottom: 0;
+    }
+    .subHeader {
+        color: rgb(200, 200, 200);
+    }
+    #createRoomButton {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: rgb(133, 170, 83);
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+        outline: none;
+        box-shadow: 0px 5px rgb(83, 113, 51);
+        box-sizing: border-box;
+        cursor: pointer;
+        font-stretch: 100%;
+        margin-bottom: 8%;
+        width: 55%;
+    }
+    #joinRoomButton {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: rgb(133, 170, 83);
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+        outline: none;
+        box-shadow: 0px 5px rgb(83, 113, 51);
+        box-sizing: border-box;
+        cursor: pointer;
+        font-stretch: 100%;
+        margin-bottom: 8%;
+        width: 55%;
+    }
+    #nextPageLeft {
+        width: 100px;
+        height: 100px;
+    }
+    #changeGameModeText {
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 70px;
+        color: rgb(255, 255, 255);
+        pointer-events: none;
+    }
+    #nextPageRight {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (min-width: 900px) {
+    .mainHeader {
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 140px;
+        color: rgb(255, 255, 255);
+        margin-top: 15%;
+        margin-bottom: 0;
+    }
+    .subHeader {
+        color: rgb(200, 200, 200);
+    }
+    #createRoomButton {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: rgb(133, 170, 83);
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+        outline: none;
+        box-shadow: 0px 5px rgb(83, 113, 51);
+        box-sizing: border-box;
+        cursor: pointer;
+        font-stretch: 100%;
+        margin-bottom: 4%;
+        width: 35%;
+    }
+    #joinRoomButton {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: rgb(133, 170, 83);
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+        outline: none;
+        box-shadow: 0px 5px rgb(83, 113, 51);
+        box-sizing: border-box;
+        cursor: pointer;
+        font-stretch: 100%;
+        margin-bottom: 4%;
+        width: 35%;
+    }
+    #nextPageLeft {
+        width: 100px;
+        height: 100px;
+    }
+    #changeGameModeText {
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 70px;
+        color: rgb(255, 255, 255);
+        pointer-events: none;
+    }
+    #nextPageRight {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .mainHeader {
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 180px;
+        color: rgb(255, 255, 255);
+        margin-top: 10%;
+        margin-bottom: 0;
+    }
+    .subHeader {
+        color: rgb(200, 200, 200);
+    }
+    #createRoomButton {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: rgb(133, 170, 83);
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+        outline: none;
+        box-shadow: 0px 5px rgb(83, 113, 51);
+        box-sizing: border-box;
+        cursor: pointer;
+        font-stretch: 100%;
+        margin-bottom: 2%;
+        width: 25%;
+    }
+    #joinRoomButton {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: rgb(133, 170, 83);
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+        outline: none;
+        box-shadow: 0px 5px rgb(83, 113, 51);
+        box-sizing: border-box;
+        cursor: pointer;
+        font-stretch: 100%;
+        margin-bottom: 5%;
+        width: 25%;
+    }
+    #nextPageLeft {
+        width: 100px;
+        height: 100px;
+    }
+    #changeGameModeText {
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 70px;
+        color: rgb(255, 255, 255);
+        pointer-events: none;
+    }
+    #nextPageRight {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+#createRoomPopupOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 1330px) {
+    #createRoomContainer {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(53, 53, 53);
+        align-items: center;
+        text-align: center;
+        border-radius: 20px;
+        justify-content: space-around;
+    }
+    #gameModeImage {
+        margin-top: 14%;
+        margin-bottom: 10%;
+    }
+    #inputField {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #submitCreateRoomButton {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: rgb(133, 170, 83);
+        border: none;
+        border-radius: 5px;
+        padding: 6px;
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+        outline: none;
+        box-shadow: 0px 5px rgb(83, 113, 51);
+        box-sizing: border-box;
+        cursor: pointer;
+        font-stretch: 100%;
+        margin-bottom: 5%;
+        width: 90%;
+    }
+    #createRoomInput {
+        border: none;
+        outline: none;
+        text-align: center;
+        padding: 5px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 15px;
+        outline: none;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-stretch: 100%;
+        margin-bottom: 5%;
+        width: 90%;
+    }
+    #closeCreateRoomPopup {
+        margin-top: 20%;
+        width: 20px;
+        cursor: pointer;
+    }
+    #joinRoomContainer {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 40%;
+        height: 10%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(53, 53, 53);
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+    }
+    #joinRoomInput {
+        border: none;
+        outline: none;
+        text-align: center;
+        padding: 5px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 12px;
+        outline: none;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-stretch: 100%;
+        margin-top: 5%;
+        width: 70%;
+    }
+    #closeJoinRoomPopup {
+        width: 20px;
+        height: 20px;
+        margin-top: 2%;
+        cursor: pointer;
+    }
+}
+
+@media(min-width: 1330px) {
+    #createRoomContainer {
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        height: 45%;
+        width: 35%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(53, 53, 53);
+        align-items: center;
+        text-align: center;
+        border-radius: 20px;
+        justify-content: space-around;
+    }
+    #gameModeImage {
+        margin-left: 10px;
+        top: 25px;
+        width: 230px;
+        height: 463px;
+    }
+    #inputField {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #createRoomInput {
+        border: none;
+        outline: none;
+        text-align: center;
+        padding: 5px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 20px;
+        outline: none;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-stretch: 100%;
+        margin-bottom: 5%;
+        width: 95%;
+    }
+    #submitCreateRoomButton {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: rgb(133, 170, 83);
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+        outline: none;
+        box-shadow: 0px 5px rgb(83, 113, 51);
+        box-sizing: border-box;
+        cursor: pointer;
+        font-stretch: 100%;
+        margin-bottom: 5%;
+        width: 95%;
+    }
+    #closeCreateRoomPopup {
+        margin-top: 20%;
+        width: 25px;
+        cursor: pointer;
+    }
+    #joinRoomContainer {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 20%;
+        height: 15%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(53, 53, 53);
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+    }
+    #joinRoomInput {
+        border: none;
+        outline: none;
+        text-align: center;
+        padding: 5px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 20px;
+        outline: none;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-stretch: 100%;
+        margin-top: 10%;
+        width: 70%;
+    }
+    #closeJoinRoomPopup {
+        width: 25px;
+        height: 25px;
+        margin-top: 3%;
+        cursor: pointer;
+    }
+}
+
+#joinRoomPopupOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#display {
+    display: none;
+    padding: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#winScreenPopupOverlay {
+    animation: fade-in 2.5s ease;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#winContainer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 400px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(53, 53, 53);
+    text-align: center;
+    border-radius: 20px;
+    align-items: center;
+}
+
+#winMessage {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+    margin-top: 10%;
+    margin-bottom: 0;
+}
+
+#backToHomeButton {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(133, 170, 83);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    outline: none;
+    box-shadow: 0px 5px rgb(83, 113, 51);
+    box-sizing: border-box;
+    cursor: pointer;
+    font-stretch: 100%;
+    margin-bottom: 5%;
+    width: 90%;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
